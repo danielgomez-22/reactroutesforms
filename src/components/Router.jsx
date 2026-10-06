@@ -1,0 +1,35 @@
+import React, { Component } from 'react'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Cine from './Cine'
+import Musica from './Musica'
+import Home from './Home'
+import FormSimple from './FormSimple'
+import Collatz from './Collatz'
+import TablaMultiplicar from './TablaMultiplicar'
+import TablaMultiplicarV2 from './TablaMultiplicarV2'
+import SeleccionMultiple from './SeleccionMultiple'
+
+
+export default class Router extends Component {
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/cine" element={<Cine/>}/>
+                <Route path="/musica" element={<Musica/>}/>
+                <Route path="/form" element={<FormSimple/>}/>
+                <Route path="/collatz" element={<Collatz/>}/>
+                <Route path="/tablamult" element={<TablaMultiplicar/>}/>
+                <Route path="/tablamult2" element={<TablaMultiplicarV2/>}/>
+                <Route path="/seleccionmultiple" element={<SeleccionMultiple/>}/>
+
+
+
+            </Routes>
+        </BrowserRouter>
+      </div>
+    )
+  }
+}
